@@ -1,22 +1,30 @@
-import React from 'react'
-import {BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import {Home} from './components/Home'
-import {AddUser} from './components/AddUser'
-import {EditUser} from './components/EditUser'
+import React from 'react';
+import {BrowserRouter as Router, Switch,Route} from 'react-router-dom';
+import {Home} from './components/Home';
+import {AddUser} from './components/AddUser';
+import {EditUser} from './components/EditUser';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
+
+
+
+
 function App() {
   return (
     <div style = {{maxWidth : '30rem' , margin : '4rem auto'}}>
-        <h1>Issiaga CONDE</h1>
+        <h1>Mise en forme</h1>
         <Router>
-          <Switch> 
+          <Switch>
 
-            <Route exact path = "/" component = {Home} />     
-            <Route path = "/add" component = {AddUser} />
-            <Route path = "/edit/:id" component = {EditUser} />
-     
+              <Route exact path = "/" component = {Home}/>
+              <Route path = "/add" component =  {AddUser}/>
+              <Route path = "/edit/:id" component =  {EditUser}/>
+
           </Switch>
         </Router>
+       
+       
+        
     </div>
   );
 }
